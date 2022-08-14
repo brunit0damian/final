@@ -1,6 +1,7 @@
+from django.conf import settings #importamos para el atributo 
 from django.db import models #importamos para habilitar SQL de DJANGO
 from django.utils import timezone #importamos timezone para que nos ayude con los atributos a la hora de hacer una publicacion en default
-from django.conf import settings #importamos para el atributo 
+
 
 class Post(models.model): #la herencia significa que es un modelo de DJANGO, asi DJANGO sabe que debe guardarlo en la DATEBASE
     autor = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
