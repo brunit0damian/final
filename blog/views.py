@@ -5,4 +5,4 @@ from django.utils import timezone #importamos timezone para que nos muestre la h
 #funcion de vista
 def post_list(request):                       #QuerySet
     posts = Post.objects.filter(fecha_de_publicacion__lte=timezone.now()).order_by('fecha_de_publicacion') #sacamos todas las intancias de Post y la ordenamos por su fecha de publicacion y la guardamos en una variable
-    return render(request, 'blog/post_list.html', {'post': posts}) #request es la peticion URL del usuario y entre {} ponemos a mostrar los datos que queremos
+    return render(request, 'blog.template.post_list.html', {'post': posts}) #request es la peticion URL del usuario y entre {} ponemos a mostrar los datos que queremos    
