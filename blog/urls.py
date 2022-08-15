@@ -4,6 +4,5 @@ from . import views #importo vistas
 
 #añado patrones de urls enlazados a vistas
 urlpatterns = [
-    path('', views.mi_vista, name='mi_vista'),
-    path('mami', views.mama_vista, name='mama_vista'),
+    path('', views.post_list, name='post_list'), #le estoy diciendo que mi '' localhost me muestre la template 'views.post_list'
 ]
