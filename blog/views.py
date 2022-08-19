@@ -8,3 +8,6 @@ def post_lista(request):                       #QuerySet
     return render(request, 'blog/post_lista.html', {'post': posts}) #request es la peticion URL del usuario y entre {} ponemos a mostrar los datos que queremos    
 def post_lista2(request):
     return render(request, 'blog/post_lista2.html')
+
+def principal(request): #funcion a renderizar mi plantilla de bootstrap
+    return render(request, 'blog/principal.html') 
