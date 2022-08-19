@@ -1,5 +1,6 @@
 from django.urls import path #libreria para usar path en urlpatterns
 from . import views #importo vistas
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 #añado patrones de urls enlazados a vistas
 urlpatterns = [
@@ -7,3 +8,5 @@ urlpatterns = [
     path('', views.post_lista2, name='post_lista2'),
     path('principal', views.principal, name='principal'), #agrego url de mi plantilla descargada de bootstrap
 ]
+
+urlpatterns += staticfiles_urlpatterns()
